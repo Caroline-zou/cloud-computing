@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+  <style>
+    /* 添加样式 */
+    .menu {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 9999;
+      background-color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+    .menu label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body style="height: 100%; margin: 0">
+<div class="menu">
+    <label for="repo-select">选择仓库:</label>
+    <select id="repo-select">
+        <option value="alibaba/canal">请选择仓库</option>
+        <option value="alibaba/canal">alibaba/canal</option>
+        <option value="alibaba/druid">alibaba/druid</option>
+        <option value="apache/pulsar">apache/pulsar</option>
+        <option value="aliyun/terraform-provider-alicloud">aliyun/terraform-provider-alicloud</option>
+        <option value="alibaba/ice">alibaba/ice</option>
+        <option value="alibaba/DataX">alibaba/DataX</option>
+        <option value="alibaba/easyexcel">alibaba/easyexcel</option>
+        <option value="midwayjs/midway">midwayjs/midway</option>
+        <option value="alibaba/Sentinel">alibaba/Sentinel</option>
+        <option value="alibaba/nacos">alibaba/nacos</option>
+        <option value="alibaba/spring-cloud-alibaba">alibaba/spring-cloud-alibaba</option>
+        <option value="labring/sealos">labring/sealos</option>
+        <option value="alibaba/arthas">alibaba/arthas</option>
+        <option value="hypertrons/hypertrons">hypertrons/hypertrons</option>
+        <option value="openyurtio/openyurt">openyurtio/openyurt</option>
+        <option value="X-lab2017/X-lab2017.github.io">X-lab2017/X-lab2017.github.io</option>
+        <option value="hypertrons/hypertrons-crx">hypertrons/hypertrons-crx</option>
+        <option value="X-lab2017/open-digger">X-lab2017/open-digger</option>
+        <option value="alibaba/GraphScope">alibaba/GraphScope</option>
+        <option value="sealerio/sealer">sealerio/sealer</option>
+        <option value="hypertrons/hypertrons-crx-website">hypertrons/hypertrons-crx-website</option>
+        <option value="ApsaraDB/PolarDB-for-PostgreSQL">ApsaraDB/PolarDB-for-PostgreSQL</option>
+        <option value="labring/laf">labring/laf</option>
+        <option value="polardb/polardbx-sql">polardb/polardbx-sql</option>
+        <option value="X-lab2017/open-galaxy">X-lab2017/open-galaxy</option>
+        <option value="alibaba/lowcode-engine">alibaba/lowcode-engine</option>
+        <option value="X-lab2017/open-research">X-lab2017/open-research</option>
+        <option value="X-lab2017/open-leaderboard">X-lab2017/open-leaderboard</option>
+        <option value="X-lab2017/open-wonderland">X-lab2017/open-wonderland</option>
+        <option value="X-lab2017/open-perf">X-lab2017/open-perf</option>
+        <option value="alibaba/fastjson2">alibaba/fastjson2</option>
+        <option value="OpenEduTech/EduTechResearch">OpenEduTech/EduTechResearch</option>
+        <option value="OpenEduTech/OpenEduKG">OpenEduTech/OpenEduKG</option>
+        <option value="X-lab2017/open-certified">X-lab2017/open-certified</option>
+        <option value="alibaba/havenask">alibaba/havenask</option>
+        <option value="modelscope/modelscope">modelscope/modelscope</option>
+        <option value="redis/redis">redis/redis</option>
+        <option value="seata/seata">seata/seata</option>
+        <option value="opensergo/opensergo-specification">opensergo/opensergo-specification</option>
+        <option value="opensergo/opensergo-dashboard">opensergo/opensergo-dashboard</option>
+        <option value="opensergo/opensergo-java-sdk">opensergo/opensergo-java-sdk</option>
+        <option value="opensergo/opensergo-control-plane">opensergo/opensergo-control-plane</option>
+        <option value="opensergo/opensergo-go-sdk">opensergo/opensergo-go-sdk</option>
+        <option value="alibaba/lowcode-code-generator-demo">alibaba/lowcode-code-generator-demo</option>
+        <option value="alibaba/lowcode-materials">alibaba/lowcode-materials</option>
+        <option value="alibaba/lowcode-plugins">alibaba/lowcode-plugins</option>
+        <option value="alibaba/lowcode-tools">alibaba/lowcode-tools</option>
+        <option value="alibaba/lowcode-demo">alibaba/lowcode-demo</option>
+        <option value="alibaba/lowcode-engine-ext">alibaba/lowcode-engine-ext</option>
+        <option value="alibaba/lowcode-datasource">alibaba/lowcode-datasource</option>
+        <option value="kubevela/catalog">kubevela/catalog</option>
+        <option value="kubevela/kubevela">kubevela/kubevela</option>
+        <option value="fluid-cloudnative/fluid">fluid-cloudnative/fluid</option>
+        <option value="kubevela/velaux">kubevela/velaux</option>
+        <option value="kubevela/kubevela.io">kubevela/kubevela.io</option>
+        <option value="kubevela/terraform-controller">kubevela/terraform-controller</option>
+        <option value="kubevela/velad">kubevela/velad</option>
+        <option value="kubevela/workflow">kubevela/workflow</option>
+        <option value="kubevela/kube-trigger">kubevela/kube-trigger</option>
+        <option value="kubevela/pkg">kubevela/pkg</option>
+        <option value="X-lab2017/od-api">X-lab2017/od-api</option>
+        <option value="X-lab2017/oss101">X-lab2017/oss101</option>
+        <option value="nacos-group/nacos-spring-project">nacos-group/nacos-spring-project</option>
+        <option value="nacos-group/nacos-spring-boot-project">nacos-group/nacos-spring-boot-project</option>
+        <option value="nacos-group/nacos-docker">nacos-group/nacos-docker</option>
+        <option value="nacos-group/nacos-k8s">nacos-group/nacos-k8s</option>
+        <option value="nacos-group/nacos-sdk-go">nacos-group/nacos-sdk-go</option>
+        <option value="nacos-group/nacos-sdk-python">nacos-group/nacos-sdk-python</option>
+        <option value="nacos-group/nacos-sdk-csharp">nacos-group/nacos-sdk-csharp</option>
+        <option value="nacos-group/nacos-sdk-cpp">nacos-group/nacos-sdk-cpp</option>
+        <option value="nacos-group/nacos-plugin">nacos-group/nacos-plugin</option>
+        <option value="nacos-group/nacos-sdk-rust">nacos-group/nacos-sdk-rust</option>
+        <option value="openyurtio/yurt-edgex-manager">openyurtio/yurt-edgex-manager</option>
+      </select>
+      <a id="analysis-link" href="#">总体分析</a>
+    </div>
+  <div id="container" style="height: 100%"></div>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    var option = {
+    baseOption:{
+        timeline: {
+            //loop: false,
+            axisType: 'category',
+            show: true,
+            autoPlay: false,
+            playInterval: 2500,
+            // data: ['2015-01', '2015-02', '2015-03','2015-04','2015-05','2015-06','2015-06'],
+			data:[
+  '2015-01', '2015-02', '2015-03', '2015-04', '2015-05', '2015-06', '2015-07', '2015-08', '2015-09', '2015-10',
+  '2015-11', '2015-12', '2016-01', '2016-02', '2016-03', '2016-04', '2016-05', '2016-06', '2016-07', '2016-08',
+  '2016-09', '2016-10', '2016-11', '2016-12', '2017-01', '2017-02', '2017-03', '2017-04', '2017-05', '2017-06',
+  '2017-07', '2017-08', '2017-09', '2017-10', '2017-11', '2017-12', '2018-01', '2018-02', '2018-03', '2018-04',
+  '2018-05', '2018-06', '2018-07', '2018-08', '2018-09', '2018-10', '2018-11', '2018-12', '2019-01', '2019-02',
+  '2019-03', '2019-04', '2019-05', '2019-06', '2019-07', '2019-08', '2019-09', '2019-10', '2019-11', '2019-12',
+  '2020-01', '2020-02', '2020-03', '2020-04', '2020-05', '2020-06', '2020-07', '2020-08', '2020-09', '2020-10',
+  '2020-11', '2020-12', '2021-01', '2021-02', '2021-03', '2021-04', '2021-05', '2021-06', '2021-07', '2021-08',
+  '2021-09', '2021-10', '2021-11', '2021-12', '2022-01', '2022-02', '2022-03', '2022-04', '2022-05', '2022-06',
+  '2022-07', '2022-08', '2022-09', '2022-10', '2022-11', '2022-12', '2023-01', '2023-02', '2023-03', '2023-04',
+  '2023-05'
+],
+            label: {
+                normal: {
+                    textStyle: {
+                        color: '#ddd'
+                    }
+                },
+                emphasis: {
+                    textStyle: {
+                        color: '#fff'
+                    }
+                }
+            },
+            legend:{
+                
+            },
+            lineStyle: {
+                color: '#555'
+            },
+            checkpointStyle: {
+                color: '#bbb',
+                borderColor: '#777',
+                borderWidth: 2
+            },
+            controlStyle: {
+                // showNextBtn: false,
+                // showPrevBtn: false,
+                normal: {
+                    color: '#666',
+                    borderColor: '#666'
+                },
+                emphasis: {
+                    color: '#aaa',
+                    borderColor: '#aaa'
+                }
+            },
+        },
+        backgroundColor: '#041326',
+        title:[
+            {
+                text: '',
+                textAlign: 'center',
+                // right: '3%',
+                left: 150,
+                bottom: 80,
+                textStyle: {
+                    fontSize: 70,
+                    color: 'rgba(255, 255, 255, 0.9)'
+                }
+            },
+            {
+                top: "top",
+                left: "center",
+                subtextStyle: {
+                    color: '#ccc'
+                },
+                textStyle: {
+                    color: '#ccc'
+                },
+            },    
+            
+        ],
+        legend: [{
+            formatter: function(name) {
+                return echarts.format.truncateText(name, 40, '14px Microsoft Yahei', '…');
+            },
+            tooltip: {
+                show: true
+            },
+            selectedMode: 'true',
+            left: 20,
+            category:[
+                {
+                    'name': 'r'
+                }, {
+                    'name': 'u'
+                }, {
+                    'name': 'i'
+                }, {
+                    'name': 'p'
+                }
+            ]
+        }],
+        tooltip: {},
+        toolbox: {
+            show: true,
+            feature: {
+                dataView: {
+                    show: true,
+                    readOnly: true
+                },
+                restore: {
+                    show: true
+                },
+                saveAsImage: {
+                    show: true
+                }
+            }
+        },
+        animationDuration: 3000,
+        animationEasingUpdate: 'quinticInOut',
+        series: [ ],
+    },
+    
+    options:[
+        {
+            title:{
+                text:'2015-01'
+            },
+            series:[
+                {
+                    // name: 'alibaba/canal',
+                    type: 'graph',
+                    layout: 'force',
+            
+                    force: {
+                        repulsion: 400,
+                        edgeLength: 200
+                    },
+                    data: [],
+                    links: [],
+                    categories: [
+                        {
+                            'name': 'r'
+                        }, {
+                            'name': 'u'
+                        }, {
+                            'name': 'p'
+                        }, {
+                            'name': 'i'
+                        }
+                    ],
+                    focusNodeAdjacency: true,
+                    roam: true,
+                    label: {
+                        normal: {
+                            show: true,
+                            position: 'top',
+                        }
+                    },
+                    lineStyle: {
+                        normal: {
+                            color: 'source',
+                            curveness: 0,
+                            type: "solid"
+                        }
+                    }
+                }
+            ]
+        },
+    ],
+    
+};
+
+var repoSelect = document.getElementById('repo-select');
+var analysisLink = document.getElementById('analysis-link');
+console.log(repoSelect)
+var selectedDate;
+var selectedRepo;
+repoSelect.addEventListener('change', function() {
+  selectedRepo = repoSelect.value;
+  console.log(selectedRepo);
+  var repoParts = selectedRepo.split('/'); 
+  // 构建相应的 dataUrl
+//   var dataUrl = 'https://oss.x-lab.info/open_digger/github/' + selectedRepo + '/project_openrank_detail/' + selectedDate + '.json';
+  var analysisUrl = './stat/parallel_html/' + repoParts[1] + '_parallel_coordinates.html'; // Replace "https://example.com/analysis" with the actual URL format for your analysis page
+  analysisLink.href = analysisUrl;
+  console.log(analysisUrl)
+});
+myChart.on('timelinechanged', function(params) {
+    var currentIndex = params.currentIndex;
+    selectedDate = option.baseOption.timeline.data[currentIndex];
+	// console.log(selectedDate)
+	// console.log('当前选中的日期:', selectedDate);
+    var dataUrl = 'https://oss.x-lab.info/open_digger/github/' + selectedRepo + '/project_openrank_detail/' + selectedDate + '.json';
+    console.log(dataUrl)
+
+  fetch(dataUrl)
+    .then(function(response) {
+      if (response.ok) {
+        return response.json();
+      }
+      throw new Error('Error: ' + response.status);
+    })
+    .then(function(data) {
+      // 在这里处理获取到的数据
+      // console.log(data);
+      for (var i = 0; i < data.nodes.length; i++) {
+      var node = data.nodes[i];
+      node.name = node.n; // 将键'n'的值复制到新键'name'中
+      delete node.n; // 删除旧键'n'
+      node.category = node.c;
+      delete node.c;
+      node.value = node.v;
+      minValue = 0;
+      maxValue = 100;
+      maxSize = 35;
+      minSize = 10;
+      node.symbolSize = (node.v - minValue) / (maxValue - minValue) * (maxSize - minSize) + minSize;
+    //   node.symbolSize = node.v*2;
+      node.draggable = true;
+  	}
+    
+    for (var i = 0; i < data.links.length; i++) {
+      var link = data.links[i];
+      link.source = link.s;
+      link.target = link.t;
+      link.weight = link.v;
+  }
+  	option.options[0].title.text = selectedDate;
+    option.options[0].series[0].data = data['nodes'];
+    option.options[0].series[0].links = data['links'];
+	myChart.clear();
+	myChart.setOption(option);
+    })
+    .catch(function(error) {
+      console.error(error);
+    });
+});
+
+
+
+if (selectedDate===undefined)
+  selectedDate = '2015-01';
+// console.log(selectedDate)
+var dataUrl = 'https://oss.x-lab.info/open_digger/github/' + selectedRepo + '/project_openrank_detail/' + selectedDate + '.json';
+console.log(dataUrl);
+fetch(dataUrl)
+  .then(function(response) {
+    if (response.ok) {
+      return response.json();
+    }
+    throw new Error('Error: ' + response.status);
+  })
+  .then(function(data) {
+    
+    for (var i = 0; i < data.nodes.length; i++) {
+      var node = data.nodes[i];
+      node.name = node.n; // 将键'n'的值复制到新键'name'中
+      delete node.n; // 删除旧键'n'
+      node.category = node.c;
+      delete node.c;
+      node.value = node.v;
+      minValue = 0;
+      maxValue = 100;
+      maxSize = 35;
+      minSize = 10;
+      node.symbolSize = (node.v - minValue) / (maxValue - minValue) * (maxSize - minSize) + minSize;
+    //   node.symbolSize = node.v*2;
+      node.draggable = true;
+  	}
+    
+    for (var i = 0; i < data.links.length; i++) {
+      var link = data.links[i];
+      link.source = link.s;
+      link.target = link.t;
+      link.weight = link.v;
+  }
+    option.options[0].series[0].data = data['nodes'];
+    option.options[0].series[0].links = data['links'];
+	myChart.clear();
+	myChart.setOption(option);
+
+    window.addEventListener('resize', function() {
+      myChart.resize();
+    });
+  })
+  .catch(function(error) {
+    console.error(error);
+  });
+
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
